@@ -1,0 +1,30 @@
+* { box-sizing: border-box; }
+html, body { font-family: sans-serif }
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #ECE6CC;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 center;
+  color: #333;
+}
+
+#main-title {
+  color: #574728;
+}
+
+#github-address {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-style: italic;
+}
