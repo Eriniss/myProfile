@@ -1,6 +1,3 @@
-import { status } from "express/lib/response";
-import { Error, Router, Request, Response, NextFunction } from 'express';
-
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
@@ -37,13 +34,13 @@ app.use(session({
 
 app.use('/', pageRouter);
 
-app.use((req: Request, res: Response, next: NextFunction) => {
-  const error: Error  =  new Error(`${req.method} ${req.url} 라우터가 없습니다.`);
+app.use((req, res, next) => {
+  const error  =  new Error(`${req.method} ${req.url} 라우터가 없습니다.`);
   error.status = 404;
   next(error);
 });
 
-app.use((err: Error, req: Request, res: Response , next: NextFunction) => {
+app.use((err, req, res , next) => {
   res.locals.message = err.message;
   res.locals.error = process.env.NODE_ENV !== 'production' ? err : {};
   res.status(err.status || 500);
