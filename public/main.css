@@ -1,25 +1,41 @@
 * { box-sizing: border-box; }
 html, body { font-family: sans-serif }
 
-
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1.5;
   color: #333;
-  background-color: #ECE6CC;
+  background-color: #fff;
 }
 
 .container {
-  max-width: 960px;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 center;
-  color: #333;
 }
 
+/* title area */
+
 #main-title {
-  color: #574728;
+  color: #333;
+  text-align: center;
 }
+
+/* body area */
+
+.profile-box {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+/* footer area */
 
 #github-address {
   font-size: 1.5rem;
@@ -27,4 +43,5 @@ body {
   color: #333;
   font-weight: bold;
   font-style: italic;
+  text-align: center;
 }
